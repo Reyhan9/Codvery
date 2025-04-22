@@ -1,4 +1,4 @@
-rootProject.name = "Codvery"
+rootProject.name = "Vercode"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

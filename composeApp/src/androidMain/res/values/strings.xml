@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Codvery</string>
+    <string name="app_name">Vercode</string>
+    <string name="enterCode">Enter The Code</string>
+    <string name="enter">Enter</string>
+    <string name="send_again">Send the code again</string>
+    <string name="desk_email_code">Enter the code that has been sent to the email address nameusr@email.com</string>
+    <string name="log_or_sign">you must login or register to enter the Vercode application. learn more</string>
+    <string name="log">Log in</string>
+    <string name="sign">Sign Up</string>
+
 </resources>

@@ -1,6 +1,7 @@
-package com.reyaanr.codvery
+package com.reyaanr.vercode
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -15,8 +16,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
-class MainActivity : ComponentActivity() {
+class MainActivity() : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.setBackgroundDrawableResource(android.R.color.transparent)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
         super.onCreate(savedInstanceState)
         setContent {
             MainLayer()
@@ -30,7 +36,7 @@ fun MainLayer() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.DarkGray)
+            .background(color = Color.Black.copy(0.8f))
             .verticalScroll(rememberScrollState()),
         horizontalAlignment = (Alignment.CenterHorizontally),
         verticalArrangement = (Arrangement.Center)
