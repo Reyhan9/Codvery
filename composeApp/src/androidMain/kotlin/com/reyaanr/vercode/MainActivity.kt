@@ -15,8 +15,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
-class MainActivity() : ComponentActivity() {
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         window.setBackgroundDrawableResource(android.R.color.transparent)
         window.setFlags(
@@ -27,6 +30,16 @@ class MainActivity() : ComponentActivity() {
         setContent {
             MainLayer()
         }
+    }
+}
+
+@Composable
+fun AppNavigation() {
+    val navController = rememberNavController()
+
+    NavHost(navController = navController, startDestination = "logapp") {
+        composable("homeapp") { App(navController) }
+        composable("logapp") { AppLog(navController) }
     }
 }
 
@@ -41,6 +54,6 @@ fun MainLayer() {
         horizontalAlignment = (Alignment.CenterHorizontally),
         verticalArrangement = (Arrangement.Center)
     ) {
-        App()
+        AppNavigation()
     }
 }
