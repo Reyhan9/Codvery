@@ -37,9 +37,10 @@ class MainActivity : ComponentActivity() {
 fun AppNavigation() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "logapp") {
+    NavHost(navController = navController, startDestination = "regapp") {
         composable("homeapp") { App(navController) }
         composable("logapp") { AppLog(navController) }
+        composable("regapp") { AppReg(navController) }
     }
 }
 

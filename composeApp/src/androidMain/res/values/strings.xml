@@ -7,5 +7,9 @@
     <string name="log_or_sign">you must login or register to enter the Vercode application. learn more</string>
     <string name="log">Log in</string>
     <string name="sign">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="new_password">New Password</string>
+    <string name="forgot_the_password">forgot the password</string>
+    <string name="send_code">Send Code</string>
 
 </resources>
